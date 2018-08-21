@@ -12,7 +12,7 @@ def processing_file(filename):
             csv_writer.writerow(line)
 
 def main():
-    processing_file('SAPS2016_SA2017.csv')
+    processing_file('../../Docs/SAPS2016_SA2017.csv')
 
 
 if __name__ == '__main__':
