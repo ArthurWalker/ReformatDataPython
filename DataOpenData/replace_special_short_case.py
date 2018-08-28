@@ -1,0 +1,14 @@
+import re
+
+def replace(address):
+    new_address = address
+    list_county = ['ANTRIM', 'ARMAGH', 'CARLOW', 'CAVAN', 'CAVAN', 'CLARE', 'CORK', 'DERRY', 'DONEGAL', 'DOWN', 'DUBLIN', 'FERMANAGH', 'GALWAY', 'KILDARE', 'KILKANNY', 'LAOIS', 'LEITRIM', 'LIMERICK',
+                   'LONGFORD', 'LOUTH', 'MAYO', 'MEATH', 'MONAGHAN', 'OFFALY', 'ROSCOMMON', 'SLIGO',
+                   'TIPPERARY', 'TYRONE', 'WATERFORD', 'WESTMEATH', 'WEXFORD', 'WICKLOW']
+    list_saint=['BRENDANS','FINIANS','BRIGIDS','ASTON','WOLSTANS','SAMSON','JOHNS','ANDREWS','JUDES','CASHEL','COLUMBANUS','FRANCIS','JOHNSTON','HELENAS','BRIDGETS','RIOCHS','LAURENCES','ANGELAS','ALBANS','PETERS','MICHAELS','ANNS','MALO','GABRIELS','AUGUSTINE','JOSEPHS','JOHN','LISCORRIE','STEPHENS','MULLINS','AUGUSTINES','CATHERINES','KEVINS','ANNES','RAPHAELS','HELENS','LUKES','MARYS','JAMES','EDMUNDS','LAWRENCE','MARNOCKS','DONAGHS','PATRICKS','PATRICK','BRIGID','OLAVES','MARGARETS']
+    
+    #Replace APT -> APARTMENT
+    if (re.search(r'\bAPT[0-9]+\b',new_address)):
+        word = re.findall(r'\bAPT[0-9]+\b',new_address)
+
+    return new_address

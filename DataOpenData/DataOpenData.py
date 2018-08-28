@@ -2,15 +2,18 @@ import sys
 import csv
 import re
 import replace_shortcut_county 
-import replace_special_case
+import replace_special_county_case
+import replace_special_short_case
 
 def execute_address(address):
     #Remove Special Characters
     new_address = re.sub(r"[\s\s\/\\\(\)\|\?\[\].,!@#~=_+^%\$&`\*\":-;<>]+",' ',address)
     #Replace special case
-    new_address = replace_special_case.replace(new_address)
+    new_address = replace_special_county_case.replace(new_address)
     #Replace Shortcut County
     new_address = replace_shortcut_county.replace(new_address)
+    #Replace special shortcut
+    new_address = replace_special_short_case.replace(new_address)
     return new_address
 
 def execute_each_line(mprn,new_address):
