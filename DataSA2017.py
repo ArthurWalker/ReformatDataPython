@@ -14,8 +14,8 @@ def processing_file(filename):
             if (line[1] != 'GEOGID'):
                 line[1] = re.sub('SA2017_', '', line[1])
             count += 1
-            #if (count ==1000):
-             # break
+            if (count ==1000):
+                break
             
             csv_writer.writerow(line)
 #[0:int(len(line)/3)]
